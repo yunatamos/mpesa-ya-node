@@ -254,11 +254,11 @@ new Mpesa({
 
 ## Notice
 This project was forked, I don't know about licensing or copyright Even what is down here MIT licence.
-So no one should come and sue me. 
+So no one should come and sue me. This package is provided as it is. Anything that happens we dont take any responsibilities.
 </br>
-I just updated some vulnerable Packages and upgraded some features to version two.
+I just updated some vulnerable Packages and upgraded some features to version two (Safaricom fucked up. Changed to v1).
 </br>
-Any issue Dm me anywhere except facebook or instagram or any affiliates of META username is @yunatamos
+Any issue Dm twitter is @yunatamos
 
 
 
