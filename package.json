@@ -1,0 +1,52 @@
+{
+  "name": "mpesa-ya-node",
+  "version": "0.1.2",
+  "description": "Node M-Pesa Library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunatamos/mpesa-ya-node"
+  },
+  "main": "src/m-pesa.js",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "https": "^1.0.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "expect.js": "^0.3.1",
+    "express": "^4.16.3",
+    "got": "^8.3.0",
+    "jsdoc": "^3.5.5",
+    "mocha": "^10.0.0",
+    "ngrok": "^3.0.0",
+    "nyc": "^15.1.0",
+    "standard": "^17.0.0",
+    "supertest": "^3.0.0"
+  },
+  "scripts": {
+    "test": "npm run test-unit && npm run test-integration",
+    "test-unit": "mocha tests/unit/*.test.js",
+    "test-integration": "nyc --reporter=text mocha --exit tests/integrations/*.js"
+  },
+  "keywords": [
+    "mpesa",
+    "mpesa-node",
+    "mpesa-api",
+    "mpesa-ya-node"
+  ],
+  "standard": {
+    "globals": [
+      "describe",
+      "context",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect"
+    ]
+  },
+  "author": "Geoffrey Mureithi // Edited By yunatamos",
+  "license": "MIT"
+}
