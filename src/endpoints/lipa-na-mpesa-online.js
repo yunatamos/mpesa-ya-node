@@ -9,11 +9,12 @@
  * @param  {string} accountRef                                Account Reference
  * @param  {string} [transactionDesc='Lipa na mpesa online']  any string of less then 20 characters
  * @param  {string} [transactionType='CustomerPayBillOnline'] The transaction type to be used for the request 'CustomerPayBillOnline'
+ * @param PartyB
  * @param  {number} [shortCode=null]                          The organization shortcode used to receive the transaction
  * @param  {string} [passKey=null]                            Lipa na mpesa passKey
  * @return {Promise}
  */
-module.exports = async function (senderMsisdn, amount, callbackUrl, accountRef, transactionDesc = 'Lipa na mpesa online', transactionType = 'CustomerPayBillOnline', shortCode = null, passKey = null) {
+module.exports = async function (senderMsisdn, amount, callbackUrl, accountRef, transactionDesc = 'Lipa na mpesa online', transactionType = 'CustomerPayBillOnline', PartyB,shortCode = null, passKey = null) {
   const _shortCode = shortCode || this.configs.lipaNaMpesaShortCode
   const _passKey = passKey || this.configs.lipaNaMpesaShortPass
   const timeStamp = (new Date()).toISOString().replace(/[^0-9]/g, '').slice(0, -3)
@@ -26,7 +27,7 @@ module.exports = async function (senderMsisdn, amount, callbackUrl, accountRef, 
     'TransactionType': transactionType,
     'Amount': amount,
     'PartyA': senderMsisdn,
-    'PartyB': _shortCode,
+    'PartyB': PartyB||_shortCode,
     'PhoneNumber': senderMsisdn,
     'CallBackURL': callbackUrl,
     'AccountReference': accountRef,
